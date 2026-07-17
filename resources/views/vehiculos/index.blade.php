@@ -32,49 +32,45 @@
 
         <a href="{{ route('vehiculos.create') }}" class="btn btn-create">+ Registrar Vehículo</a>
 
-        @forelse ($vehiculos as $vehiculo)
-            @if ($loop->first)
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Placa</th>
-                            <th>Marca</th>
-                            <th>Modelo</th>
-                            <th>Color</th>
-                            <th>Propietario</th>
-                            <th>Teléfono</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-            @endif
-
-            <tr>
-                <td>{{ $vehiculo->id }}</td>
-                <td>{{ $vehiculo->placa }}</td>
-                <td>{{ $vehiculo->marca }}</td>
-                <td>{{ $vehiculo->modelo }}</td>
-                <td>{{ $vehiculo->color }}</td>
-                <td>{{ $vehiculo->propietario }}</td>
-                <td>{{ $vehiculo->telefono }}</td>
-                <td class="actions">
-                    <a href="{{ route('vehiculos.edit', $vehiculo->id) }}" class="btn btn-edit">Editar</a>
-                    <form action="{{ route('vehiculos.destroy', $vehiculo->id) }}" method="POST" onsubmit="return confirm('¿Eliminar este vehículo?');">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-delete">Eliminar</button>
-                    </form>
-                </td>
-            </tr>
-
-            @if ($loop->last)
-                    </tbody>
-                </table>
-            @endif
-        @empty
+        @if ($vehiculos->isEmpty())
             <p style="color: #666; margin-top: 20px;">No hay vehículos registrados.</p>
-        @endforelse
+        @else
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Placa</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Color</th>
+                        <th>Propietario</th>
+                        <th>Teléfono</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($vehiculos as $vehiculo)
+                        <tr>
+                            <td>{{ $vehiculo->id }}</td>
+                            <td>{{ $vehiculo->placa }}</td>
+                            <td>{{ $vehiculo->marca }}</td>
+                            <td>{{ $vehiculo->modelo }}</td>
+                            <td>{{ $vehiculo->color }}</td>
+                            <td>{{ $vehiculo->propietario }}</td>
+                            <td>{{ $vehiculo->telefono }}</td>
+                            <td class="actions">
+                                <a href="{{ route('vehiculos.edit', $vehiculo->id) }}" class="btn btn-edit">Editar</a>
+                                <form action="{{ route('vehiculos.destroy', $vehiculo->id) }}" method="POST" onsubmit="return confirm('¿Eliminar este vehículo?');">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-delete">Eliminar</button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        @endif
     </div>
 </body>
 </html>
