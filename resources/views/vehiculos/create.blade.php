@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar Vehículo</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }
-        .container { max-width: 500px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        h1 { color: #333; }
-        label { display: block; margin-top: 12px; font-weight: bold; color: #555; }
-        input { width: 100%; padding: 8px; margin-top: 4px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-        input:focus { border-color: #007bff; outline: none; }
-        .btn { padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; margin-top: 15px; }
-        .btn-primary { background: #007bff; color: #fff; }
-        .btn-primary:hover { background: #0056b3; }
-        .btn-back { background: #6c757d; color: #fff; text-decoration: none; display: inline-block; margin-top: 15px; padding: 10px 20px; border-radius: 4px; }
-        .btn-back:hover { background: #5a6268; }
-        .error { color: #dc3545; font-size: 13px; margin-top: 4px; }
+        body { font-family: Arial, Helvetica, sans-serif; margin: 30px; background: #eef2f5; }
+        .container { max-width: 520px; margin: 0 auto; background: #fff; padding: 25px 30px; border: 1px solid #d0d7de; }
+        h1 { color: #2c3e50; font-size: 24px; margin-top: 0; margin-bottom: 20px; border-bottom: 2px solid #446688; padding-bottom: 10px; }
+        label { display: block; margin-top: 10px; font-weight: bold; color: #444; font-size: 14px; }
+        input { width: 100%; padding: 7px 8px; margin-top: 3px; border: 1px solid #bbb; box-sizing: border-box; font-size: 14px; font-family: Arial, sans-serif; }
+        input:focus { border-color: #446688; background: #fafcff; outline: none; }
+        .btn { padding: 9px 20px; border: 1px solid #888; cursor: pointer; font-size: 14px; margin-top: 18px; font-family: Arial, sans-serif; }
+        .btn-primary { background: #446688; color: #fff; border-color: #3a5c7a; }
+        .btn-primary:hover { background: #3a5c7a; }
+        .btn-back { background: #f0f0f0; color: #333; text-decoration: none; display: inline-block; margin-top: 18px; padding: 9px 20px; border: 1px solid #888; font-size: 14px; margin-left: 8px; }
+        .btn-back:hover { background: #e0e0e0; }
+        .error { color: #cc0000; font-size: 13px; margin-top: 3px; }
     </style>
 </head>
 <body>

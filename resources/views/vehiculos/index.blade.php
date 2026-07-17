@@ -5,21 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listado de Vehículos</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }
-        .container { max-width: 900px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        h1 { color: #333; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #ddd; }
-        th { background: #007bff; color: #fff; }
-        tr:hover { background: #f1f1f1; }
-        .btn { padding: 6px 14px; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; font-size: 14px; display: inline-block; }
-        .btn-edit { background: #ffc107; color: #333; }
-        .btn-delete { background: #dc3545; color: #fff; }
-        .btn-create { background: #28a745; color: #fff; margin-bottom: 15px; }
-        .btn-create:hover { background: #218838; }
-        .alert { padding: 12px; background: #d4edda; color: #155724; border-radius: 4px; margin-bottom: 15px; border: 1px solid #c3e6cb; }
-        .actions { display: flex; gap: 6px; }
+        body { font-family: Arial, Helvetica, sans-serif; margin: 30px; background: #eef2f5; }
+        .container { max-width: 920px; margin: 0 auto; background: #fff; padding: 25px 30px; border: 1px solid #d0d7de; }
+        h1 { color: #2c3e50; font-size: 24px; margin-top: 0; margin-bottom: 20px; border-bottom: 2px solid #446688; padding-bottom: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 14px; }
+        th, td { padding: 8px 10px; text-align: left; border: 1px solid #ccc; }
+        th { background: #446688; color: #fff; font-weight: bold; }
+        td { background: #fff; }
+        tr:nth-child(even) td { background: #f8f9fa; }
+        tr:hover td { background: #e8f0fe; }
+        .btn { padding: 6px 14px; border: 1px solid #888; cursor: pointer; text-decoration: none; font-size: 13px; display: inline-block; color: #333; background: #f0f0f0; }
+        .btn:hover { background: #e0e0e0; }
+        .btn-edit { background: #fff3cd; border-color: #e6c952; color: #6b5300; }
+        .btn-edit:hover { background: #ffeaa7; }
+        .btn-delete { background: #f8d7da; border-color: #d6a8ab; color: #721c24; }
+        .btn-delete:hover { background: #f1c0c5; }
+        .btn-create { background: #d4edda; border-color: #8fc99b; color: #155724; margin-bottom: 15px; padding: 8px 18px; font-size: 14px; }
+        .btn-create:hover { background: #c3e6cb; }
+        .alert { padding: 10px 15px; background: #d4edda; color: #155724; border: 1px solid #c3e6cb; margin-bottom: 15px; font-size: 14px; }
+        .actions { white-space: nowrap; }
         form { display: inline; }
+        p { font-size: 14px; }
     </style>
 </head>
 <body>
